@@ -32,7 +32,7 @@ server.get("/", function(req, res){
     db.query('SELECT * FROM "donors";', function(err, result){
         if (err) return res.send("Erro no banco de dados.")
 
-        const donors = result.rows
+        const donors = result.rows 
         return res.render("index.html", {donors})
     })
     
